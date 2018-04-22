@@ -18,9 +18,9 @@ install:
   - pip install setuptools --upgrade
   - pip install tox coveralls
 
-script: 
+script:
   - tox
-  - python setup.py test --addopts "-v --cov typepy --cov-report term-missing"
+  - python setup.py test --addopts "-v --cov msgfy --cov-report term-missing"
 
 after_success:
   - coveralls
