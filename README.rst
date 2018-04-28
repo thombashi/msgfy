@@ -17,23 +17,26 @@ msgfy is a Python library for convert Exception instance to a human-readable err
 
 Usage
 ====================================
+
+Convert from Exception instance to an error message
+------------------------------------------------------------------------
 :Sample Code:
     .. code:: python
 
         import msgfy
 
-        def main():
+        def error_message_example():
             try:
                 raise ValueError("example message")
             except ValueError as e:
                 print(msgfy.to_error_message(e))
 
-        main()
+        error_message_example()
 
 :Output:
     ::
 
-        ValueError error_message_basic.py(19) main: example message
+        ValueError: example error message
 
 Specify message format
 ------------------------------------
@@ -42,18 +45,39 @@ Specify message format
 
         import msgfy
 
-        def main():
+        def error_message_format_example():
             try:
-                raise ValueError("example message")
+                raise ValueError("example error message")
             except ValueError as e:
-                print(msgfy.to_error_message(e, "{func_name}: {error_msg}"))
+                print(msgfy.to_error_message(e, "{exception} {func_name}: {error_msg}"))
 
-        main()
+        error_message_format_example()
 
 :Output:
     ::
 
-        main: example message
+        ValueError error_message_format_example: example error message
+
+
+Convert from Exception instance to a debug message
+------------------------------------------------------------------------
+:Sample Code:
+    .. code:: python
+
+        import msgfy
+
+        def debug_message_example():
+            try:
+                raise ValueError("example debug message")
+            except ValueError as e:
+                print(msgfy.to_debug_message(e))
+
+        debug_message_example()
+
+:Output:
+    ::
+
+        ValueError <ipython-input-4-bdd569af197b>(5) debug_message_example: example debug message
 
 
 Available keywords for message formats
