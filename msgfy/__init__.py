@@ -13,8 +13,10 @@ import os.path
 
 
 DEFAULT_ERROR_MESSAGE_FORMAT = "{exception}: {error_msg}"
+DEFAULT_DEBUG_MESSAGE_FORMAT = "{exception} {file_name}({line_no}) {func_name}: {error_msg}"
 
 error_message_format = DEFAULT_ERROR_MESSAGE_FORMAT
+debug_message_format = DEFAULT_DEBUG_MESSAGE_FORMAT
 
 
 def _to_message(exception_obj, format_str, frame):
@@ -35,5 +37,12 @@ def _to_message(exception_obj, format_str, frame):
 def to_error_message(exception_obj, format_str=None):
     if not format_str:
         format_str = error_message_format
+
+    return _to_message(exception_obj, format_str, inspect.currentframe().f_back)
+
+
+def to_debug_message(exception_obj, format_str=None):
+    if not format_str:
+        format_str = debug_message_format
 
     return _to_message(exception_obj, format_str, inspect.currentframe().f_back)
