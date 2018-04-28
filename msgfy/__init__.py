@@ -12,8 +12,7 @@ import inspect
 import os.path
 
 
-default_error_format_string = (
-    "{exception} {file_name}({line_no}) {func_name}: {error_msg}")
+default_error_format_string = "{exception} {file_name}({line_no}) {func_name}: {error_msg}"
 
 
 def to_error_message(exception_obj, format_str=None):
