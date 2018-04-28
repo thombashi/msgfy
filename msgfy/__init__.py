@@ -12,7 +12,9 @@ import inspect
 import os.path
 
 
-default_error_message_format = "{exception} {file_name}({line_no}) {func_name}: {error_msg}"
+DEFAULT_ERROR_MESSAGE_FORMAT = "{exception}: {error_msg}"
+
+error_message_format = DEFAULT_ERROR_MESSAGE_FORMAT
 
 
 def _to_message(exception_obj, format_str, frame):
@@ -32,6 +34,6 @@ def _to_message(exception_obj, format_str, frame):
 
 def to_error_message(exception_obj, format_str=None):
     if not format_str:
-        format_str = default_error_message_format
+        format_str = error_message_format
 
     return _to_message(exception_obj, format_str, inspect.currentframe().f_back)
