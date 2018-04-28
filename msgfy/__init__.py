@@ -15,14 +15,9 @@ import os.path
 default_error_format_string = "{exception} {file_name}({line_no}) {func_name}: {error_msg}"
 
 
-def to_error_message(exception_obj, format_str=None):
+def _to_message(exception_obj, format_str, frame):
     if not isinstance(exception_obj, Exception):
         raise ValueError("exception_obj must be an instance of a subclass of the Exception class")
-
-    if not format_str:
-        format_str = default_error_format_string
-
-    frame = inspect.currentframe().f_back
 
     try:
         return format_str.replace(
@@ -33,3 +28,10 @@ def to_error_message(exception_obj, format_str=None):
             "{error_msg}", str(exception_obj))
     except AttributeError:
         raise ValueError("format_str must be a string")
+
+
+def to_error_message(exception_obj, format_str=None):
+    if not format_str:
+        format_str = default_error_format_string
+
+    return _to_message(exception_obj, format_str, inspect.currentframe().f_back)
