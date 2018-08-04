@@ -24,12 +24,13 @@ def _to_message(exception_obj, format_str, frame):
         raise ValueError("exception_obj must be an instance of a subclass of the Exception class")
 
     try:
-        return format_str.replace(
-            "{exception}", exception_obj.__class__.__name__).replace(
-            "{file_name}", os.path.basename(frame.f_code.co_filename)).replace(
-            "{line_no}", str(frame.f_lineno)).replace(
-            "{func_name}", frame.f_code.co_name).replace(
-            "{error_msg}", str(exception_obj))
+        return (
+            format_str.replace("{exception}", exception_obj.__class__.__name__)
+            .replace("{file_name}", os.path.basename(frame.f_code.co_filename))
+            .replace("{line_no}", str(frame.f_lineno))
+            .replace("{func_name}", frame.f_code.co_name)
+            .replace("{error_msg}", str(exception_obj))
+        )
     except AttributeError:
         raise ValueError("format_str must be a string")
 
