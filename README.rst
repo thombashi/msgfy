@@ -3,6 +3,9 @@ msgfy
 .. image:: https://badge.fury.io/py/msgfy.svg
     :target: https://badge.fury.io/py/msgfy
 
+.. image:: https://img.shields.io/pypi/pyversions/msgfy.svg
+   :target: https://pypi.python.org/pypi/msgfy
+
 .. image:: https://img.shields.io/travis/thombashi/msgfy/master.svg?label=Linux
     :target: https://travis-ci.org/thombashi/msgfy
 
