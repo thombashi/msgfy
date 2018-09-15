@@ -4,7 +4,7 @@ msgfy
     :target: https://badge.fury.io/py/msgfy
 
 .. image:: https://img.shields.io/pypi/pyversions/msgfy.svg
-   :target: https://pypi.python.org/pypi/msgfy
+   :target: https://pypi.org/project/msgfy
 
 .. image:: https://img.shields.io/travis/thombashi/msgfy/master.svg?label=Linux
     :target: https://travis-ci.org/thombashi/msgfy
@@ -114,5 +114,5 @@ Python 2.7+ or 3.4+
 Test dependencies
 -----------------
 - `pytest <https://docs.pytest.org/en/latest/>`__
-- `pytest-runner <https://pypi.python.org/pypi/pytest-runner>`__
+- `pytest-runner <https://github.com/pytest-dev/pytest-runner>`__
 - `tox <https://testrun.org/tox/latest/>`__
