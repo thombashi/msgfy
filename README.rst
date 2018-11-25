@@ -12,6 +12,9 @@ msgfy
 .. image:: https://img.shields.io/appveyor/ci/thombashi/msgfy/master.svg?label=Windows
     :target: https://ci.appveyor.com/project/thombashi/msgfy
 
+.. image:: https://coveralls.io/repos/github/thombashi/msgfy/badge.svg?branch=master
+    :target: https://coveralls.io/github/thombashi/msgfy?branch=master
+
 
 Summary
 ====================================
