@@ -39,8 +39,8 @@ matrix:
               - coveralls
 
 install:
-    - pip install setuptools --upgrade
-    - pip install tox
+    - travis_retry pip install setuptools --upgrade
+    - travis_retry pip install tox
 
 script:
     - tox
