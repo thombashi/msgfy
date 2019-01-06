@@ -2,18 +2,23 @@ msgfy
 ====================================
 .. image:: https://badge.fury.io/py/msgfy.svg
     :target: https://badge.fury.io/py/msgfy
+    :alt: PyPI package version
 
 .. image:: https://img.shields.io/pypi/pyversions/msgfy.svg
-   :target: https://pypi.org/project/msgfy
+    :target: https://pypi.org/project/msgfy
+    :alt: Supported Python versions
 
-.. image:: https://img.shields.io/travis/thombashi/msgfy/master.svg?label=Linux
+.. image:: https://img.shields.io/travis/thombashi/msgfy/master.svg?label=Linux-CI
     :target: https://travis-ci.org/thombashi/msgfy
+    :alt: Linux CI status
 
-.. image:: https://img.shields.io/appveyor/ci/thombashi/msgfy/master.svg?label=Windows
+.. image:: https://img.shields.io/appveyor/ci/thombashi/msgfy/master.svg?label=Windows-CI
     :target: https://ci.appveyor.com/project/thombashi/msgfy
+    :alt: Windows CI status
 
 .. image:: https://coveralls.io/repos/github/thombashi/msgfy/badge.svg?branch=master
     :target: https://coveralls.io/github/thombashi/msgfy?branch=master
+    :alt: Test coverage
 
 
 Summary
