@@ -8,11 +8,11 @@ msgfy
     :target: https://pypi.org/project/msgfy
     :alt: Supported Python versions
 
-.. image:: https://img.shields.io/travis/thombashi/msgfy/master.svg?label=Linux-CI
+.. image:: https://img.shields.io/travis/thombashi/msgfy/master.svg?label=Linux%20CI
     :target: https://travis-ci.org/thombashi/msgfy
     :alt: Linux CI status
 
-.. image:: https://img.shields.io/appveyor/ci/thombashi/msgfy/master.svg?label=Windows-CI
+.. image:: https://img.shields.io/appveyor/ci/thombashi/msgfy/master.svg?label=Windows%20CI
     :target: https://ci.appveyor.com/project/thombashi/msgfy
     :alt: Windows CI status
 
