@@ -62,6 +62,7 @@ setuptools.setup(
     long_description=LONG_DESCRIPTION,
     packages=setuptools.find_packages(exclude=["test*"]),
     project_urls={
+        "Source": REPOSITORY_URL,
         "Tracker": "{:s}/issues".format(REPOSITORY_URL),
     },
     python_requires='>=2.7,!=3.0.*,!=3.1.*,!=3.2.*',
@@ -89,5 +90,6 @@ setuptools.setup(
         "Programming Language :: Python :: 3.7",
         "Topic :: Software Development :: Libraries",
         "Topic :: Software Development :: Libraries :: Python Modules",
+        "Topic :: Text Processing",
     ],
     cmdclass=get_release_command_class())
