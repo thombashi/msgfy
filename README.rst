@@ -1,5 +1,13 @@
-msgfy
+.. contents:: **msgfy**
+   :backlinks: top
+   :depth: 2
+
+
+Summary
 ====================================
+msgfy is a Python library for convert Exception instance to a human-readable error message.
+
+
 .. image:: https://badge.fury.io/py/msgfy.svg
     :target: https://badge.fury.io/py/msgfy
     :alt: PyPI package version
@@ -19,11 +27,6 @@ msgfy
 .. image:: https://coveralls.io/repos/github/thombashi/msgfy/badge.svg?branch=master
     :target: https://coveralls.io/github/thombashi/msgfy?branch=master
     :alt: Test coverage
-
-
-Summary
-====================================
-msgfy is a Python library for convert Exception instance to a human-readable error message.
 
 
 Usage
@@ -118,6 +121,7 @@ Installation
 Dependencies
 ====================================
 Python 2.7+ or 3.4+
+No external dependencies.
 
 Test dependencies
 -----------------
