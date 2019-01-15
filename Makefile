@@ -15,3 +15,8 @@ clean:
 fmt:
 	@black $(CURDIR)
 	@isort --apply --recursive
+
+.PHONY: release
+release:
+	@python setup.py release
+	@rm -rf dist/
