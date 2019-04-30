@@ -65,14 +65,14 @@ setuptools.setup(
         "Source": REPOSITORY_URL,
         "Tracker": "{:s}/issues".format(REPOSITORY_URL),
     },
-    python_requires='>=2.7,!=3.0.*,!=3.1.*,!=3.2.*',
+    python_requires=">=2.7, !=3.0.*, !=3.1.*, !=3.2.*",
 
     install_requires=SETUPTOOLS_REQUIRES,
     setup_requires=SETUPTOOLS_REQUIRES + PYTEST_RUNNER_REQUIRES,
     tests_require=TESTS_REQUIRES,
     extras_require={
-        "build": ["wheel"],
-        "release": ["releasecmd>=0.0.12,<0.1.0"],
+        "build": ["twine", "wheel"],
+        "release": ["releasecmd>=0.0.18,<0.1.0"],
         "test": TESTS_REQUIRES,
     },
 
