@@ -114,9 +114,21 @@ Available keywords for message formats
 
 Installation
 ====================================
+
+Install from PyPI
+------------------------------
 ::
 
     pip install msgfy
+
+Install from PPA (for Ubuntu)
+------------------------------
+::
+
+    sudo add-apt-repository ppa:thombashi/ppa
+    sudo apt update
+    sudo apt install python3-msgfy
+
 
 Dependencies
 ====================================
