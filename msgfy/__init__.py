@@ -4,6 +4,7 @@
 
 import inspect
 import os.path
+from typing import Optional
 
 from .__version__ import __author__, __copyright__, __email__, __license__, __version__
 
@@ -15,7 +16,7 @@ error_message_format = DEFAULT_ERROR_MESSAGE_FORMAT
 debug_message_format = DEFAULT_DEBUG_MESSAGE_FORMAT
 
 
-def _to_message(exception_obj, format_str, frame):
+def _to_message(exception_obj: Exception, format_str: str, frame) -> str:
     if not isinstance(exception_obj, Exception):
         raise ValueError("exception_obj must be an instance of a subclass of the Exception class")
 
@@ -31,14 +32,14 @@ def _to_message(exception_obj, format_str, frame):
         raise ValueError("format_str must be a string")
 
 
-def to_error_message(exception_obj, format_str=None):
+def to_error_message(exception_obj: Exception, format_str: Optional[str] = None):
     if not format_str:
         format_str = error_message_format
 
     return _to_message(exception_obj, format_str, inspect.currentframe().f_back)
 
 
-def to_debug_message(exception_obj, format_str=None):
+def to_debug_message(exception_obj: Exception, format_str: Optional[str] = None):
     if not format_str:
         format_str = debug_message_format
 
