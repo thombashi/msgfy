@@ -6,10 +6,10 @@
 
 from __future__ import absolute_import, unicode_literals
 
-from .__version__ import __author__, __copyright__, __email__, __license__, __version__
 import inspect
 import os.path
 
+from .__version__ import __author__, __copyright__, __email__, __license__, __version__
 from ._six import text_type
 
 

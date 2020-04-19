@@ -6,8 +6,9 @@
 
 from __future__ import print_function, unicode_literals
 
-import msgfy
 import pytest
+
+import msgfy
 
 
 class Test_to_error_message(object):
