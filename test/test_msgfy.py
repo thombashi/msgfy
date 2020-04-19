@@ -1,17 +1,13 @@
-# encoding: utf-8
-
 """
 .. codeauthor:: Tsuyoshi Hombashi <tsuyoshi.hombashi@gmail.com>
 """
-
-from __future__ import print_function, unicode_literals
 
 import pytest
 
 import msgfy
 
 
-class Test_to_error_message(object):
+class Test_to_error_message:
     def test_normal_smoke(self):
         assert msgfy.to_error_message(ValueError("test"))
 
@@ -40,7 +36,7 @@ class Test_to_error_message(object):
             assert msgfy.to_error_message(ValueError("test"), format_str)
 
 
-class Test_to_debug_message(object):
+class Test_to_debug_message:
     def test_normal_smoke(self):
         assert msgfy.to_debug_message(ValueError("test"))
 

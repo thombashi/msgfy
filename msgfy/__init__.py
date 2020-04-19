@@ -1,16 +1,11 @@
-# encoding: utf-8
-
 """
 .. codeauthor:: Tsuyoshi Hombashi <tsuyoshi.hombashi@gmail.com>
 """
-
-from __future__ import absolute_import, unicode_literals
 
 import inspect
 import os.path
 
 from .__version__ import __author__, __copyright__, __email__, __license__, __version__
-from ._six import text_type
 
 
 DEFAULT_ERROR_MESSAGE_FORMAT = "{exception}: {error_msg}"
@@ -28,9 +23,9 @@ def _to_message(exception_obj, format_str, frame):
         return (
             format_str.replace("{exception}", exception_obj.__class__.__name__)
             .replace("{file_name}", os.path.basename(frame.f_code.co_filename))
-            .replace("{line_no}", text_type(frame.f_lineno))
+            .replace("{line_no}", str(frame.f_lineno))
             .replace("{func_name}", frame.f_code.co_name)
-            .replace("{error_msg}", text_type(exception_obj))
+            .replace("{error_msg}", str(exception_obj))
         )
     except AttributeError:
         raise ValueError("format_str must be a string")
