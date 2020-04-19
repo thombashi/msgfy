@@ -36,11 +36,19 @@ def to_error_message(exception_obj: Exception, format_str: Optional[str] = None)
     if not format_str:
         format_str = error_message_format
 
-    return _to_message(exception_obj, format_str, inspect.currentframe().f_back)
+    frame = inspect.currentframe()
+    if frame is None:
+        return str(exception_obj)
+
+    return _to_message(exception_obj, format_str, frame.f_back)
 
 
 def to_debug_message(exception_obj: Exception, format_str: Optional[str] = None):
     if not format_str:
         format_str = debug_message_format
 
-    return _to_message(exception_obj, format_str, inspect.currentframe().f_back)
+    frame = inspect.currentframe()
+    if frame is None:
+        return str(exception_obj)
+
+    return _to_message(exception_obj, format_str, frame.f_back)
