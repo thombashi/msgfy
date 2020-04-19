@@ -36,6 +36,7 @@ install:
   - travis_retry pip install tox
 
 script:
+  - python --version
   - tox
 
 notifications:
