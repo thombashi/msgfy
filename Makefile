@@ -1,4 +1,5 @@
 PACKAGE := msgfy
+PYTHON := python3
 
 
 .PHONY: build
@@ -22,10 +23,10 @@ fmt:
 
 .PHONY: release
 release:
-	@python setup.py release --sign
+	@$(PYTHON) setup.py release --sign
 	@make clean
 
 .PHONY: setup
 setup:
-	@pip install --upgrade -e .[test] releasecmd tox
-	pip check
+	@$(PYTHON) -m pip install -q --disable-pip-version-check --upgrade -e .[test] releasecmd tox
+	@$(PYTHON) -m pip check
