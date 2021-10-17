@@ -9,7 +9,6 @@ build: clean
 
 .PHONY: check
 check:
-	travis lint
 	@tox -e lint
 
 .PHONY: clean
