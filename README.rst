@@ -124,7 +124,7 @@ Install from PPA (for Ubuntu)
 
 Dependencies
 ====================================
-Python 3.5+
+Python 3.6+
 No external dependencies.
 
 Test dependencies
