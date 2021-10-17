@@ -16,10 +16,6 @@ msgfy is a Python library for convert Exception instance to a human-readable err
     :target: https://pypi.org/project/msgfy
     :alt: Supported Python versions
 
-.. image:: https://img.shields.io/appveyor/ci/thombashi/msgfy/master.svg?label=Windows%20CI
-    :target: https://ci.appveyor.com/project/thombashi/msgfy
-    :alt: Windows CI status
-
 .. image:: https://coveralls.io/repos/github/thombashi/msgfy/badge.svg?branch=master
     :target: https://coveralls.io/github/thombashi/msgfy?branch=master
     :alt: Test coverage
