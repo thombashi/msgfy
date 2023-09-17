@@ -16,16 +16,16 @@ msgfy is a Python library for convert Exception instance to a human-readable err
     :target: https://pypi.org/project/msgfy
     :alt: Supported Python versions
 
-.. image:: https://github.com/thombashi/msgfy/actions/workflows/lint_and_test.yml/badge.svg
-    :target: https://github.com/thombashi/msgfy/actions/workflows/lint_and_test.yml
+.. image:: https://github.com/thombashi/msgfy/actions/workflows/ci.yml/badge.svg
+    :target: https://github.com/thombashi/msgfy/actions/workflows/ci.yml
     :alt: CI status of Linux/macOS/Windows
 
 .. image:: https://coveralls.io/repos/github/thombashi/msgfy/badge.svg?branch=master
     :target: https://coveralls.io/github/thombashi/msgfy?branch=master
     :alt: Test coverage
 
-.. image:: https://github.com/thombashi/msgfy/actions/workflows/codeql-analysis.yml/badge.svg
-    :target: https://github.com/thombashi/msgfy/actions/workflows/codeql-analysis.yml
+.. image:: https://github.com/thombashi/msgfy/actions/workflows/github-code-scanning/codeql/badge.svg
+    :target: https://github.com/thombashi/msgfy/actions/workflows/github-code-scanning/codeql
     :alt: CodeQL
 
 
@@ -132,7 +132,7 @@ Install from PPA (for Ubuntu)
 
 Dependencies
 ====================================
-Python 3.6+
+Python 3.7+
 No external dependencies.
 
 Test dependencies
