@@ -20,6 +20,9 @@ def _to_message(exception_obj: Exception, format_str: str, frame) -> str:
     if not isinstance(exception_obj, Exception):
         raise ValueError("exception_obj must be an instance of a subclass of the Exception class")
 
+    if frame is None:
+        return str(exception_obj)
+
     try:
         return (
             format_str.replace("{exception}", exception_obj.__class__.__name__)
