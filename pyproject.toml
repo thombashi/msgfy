@@ -62,3 +62,12 @@ show_error_codes = true
 show_error_context = true
 warn_unreachable = true
 warn_unused_configs = true
+
+[tool.pytest.ini_options]
+testpaths = [
+  "test",
+]
+
+md_report = true
+md_report_color = "auto"
+md_report_verbose = 0
